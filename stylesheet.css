@@ -1,0 +1,58 @@
+@font-face { font-family: JetBrainsMono-ExtraBold; font-weight: extra-bold; src: url('fonts/JetBrainsMono-ExtraBold.ttf'); }
+@font-face { font-family: Rockwell; font-weight: normal; src: url('fonts/ROCK.TTF'); }
+@font-face { font-family: TwCenMT; font-weight: normal; src: url('fonts/TCM_____.TTF'); }
+@font-face { font-family: TwCenMT; font-weight: bold; src: url('fonts/TCB_____.TTF'); }
+
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.noscrollbarthing::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noscrollbarthing {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body {
+    background: rgb(231, 124, 82);
+}
+
+#top-time {
+    background-color: white;
+    box-shadow: 10px 10px black;
+    font-family: "JetBrainsMono-ExtraBold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 3rem 12rem;
+    padding: 2rem;
+}
+
+.schedule {
+    background-color: white;
+
+    box-shadow: 10px 10px black;
+    font-family: "Rockwell";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 15rem;
+    height: 30rem;
+    margin: 4rem 3rem;
+}
+
+.p-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
