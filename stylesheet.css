@@ -86,3 +86,36 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+[type="file"] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+}
+  
+[type="file"] + label {
+    background-color: rgb(14, 184, 85);
+    border-radius: 4rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-family: "JetBrainsMono-ExtraBold";
+}
+ 
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+      background-color: #8bcc23;
+}
+  
+[type="file"]:focus + label {
+    outline: 1px dotted #000;
+}
+#inputbox {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0rem;
+}
