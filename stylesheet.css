@@ -16,9 +16,9 @@
 }
 
 body {
-    background: rgb(231, 124, 82);
+    background: rgb(206, 59, 59);
 }
-
+    
 #top-time {
     background-color: white;
     box-shadow: 10px 10px black;
@@ -42,13 +42,43 @@ body {
     font-size: 30px;
     color: rgb(0, 0, 0);
     text-align: center;
-    width: 15rem;
-    height: 30rem;
+    width: 21rem;
+    height: 29rem;
     margin: 4rem 3rem;
 }
+.name {
+    font-family: "Rockwell";
+    font-size: 50px;
+    padding: 2rem;
+}
 
+.middle-info {
+    background: rgb(73, 108, 221);
+    margin: rem 0rem;
+    color: white;
+    font-family: "TwCenMT";
+    font-weight: normal;
+    font-size: 35px;
+    padding: 1rem;
+}
+.middle-top {
+}
+.middle-middle {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 1rem;  
+}
+.middle-bottom {
+
+}
+
+.bottom-info {
+    font-family: "TwCenMT";
+    font-weight: normal;
+    font-size: 30px;
+    padding: 3rem;
+}
 .p-flex {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
