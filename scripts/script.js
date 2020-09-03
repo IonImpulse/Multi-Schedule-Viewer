@@ -84,18 +84,15 @@ function startTime() {
 
     for (var i = 0; i < data.length; i++) { 
         var day = parseInt(localStorage.getItem("day_count")) % data[i][1].length;
+        var found_block = false;
+
         for (var j = 0; j < data[i][1][day].length; j++) {
             var time_period_milliseconds = toSecondsFromString(data[i][1][day][j][0]);
-                    
             if (today_milliseconds > time_period_milliseconds) {
-                // Set block name
-                if (j == 0) {
-                    var yesterday = Math.abs(parseInt(localStorage.getItem("day_count")) - 1) % data[i][1].length;
+                found_block = true;
 
-                    middles[i].innerHTML = data[i][1][yesterday][j][1];
-                } else {
-                    middles[i].innerHTML = data[i][1][day][j][1];
-                }
+                // Set block name
+                middles[i].innerHTML = data[i][1][day][j][1];
 
                 // Set time left and next period
                 if (j == data[i][1][day].length - 1) {
@@ -110,10 +107,20 @@ function startTime() {
                     var difference = Math.abs(today_milliseconds - next_period[0]);
                 }
 
-                bottoms[i].innerHTML = getYoutubeLikeToDisplay(difference) + " left";
-                nexts[i].innerHTML = "Next is:<br>" + next_period[1];
-
             }
+
+            if (found_block == false) {
+                var yesterday = Math.abs(parseInt(localStorage.getItem("day_count")) - 1) % data[i][1].length;
+
+                middles[i].innerHTML = data[i][1][yesterday][j][1];
+
+                var next_period = [toSecondsFromString(data[i][1][day][0][0]), data[i][1][day][0][1]];
+
+                var difference = Math.abs(today_milliseconds - next_period[0]);
+            }
+
+            bottoms[i].innerHTML = getYoutubeLikeToDisplay(difference) + " left";
+            nexts[i].innerHTML = "Next is:<br>" + next_period[1];
         }
     }
 
