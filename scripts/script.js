@@ -60,7 +60,16 @@ function start_schedules() {
     for (var i = 0; i < names.length; i++) {
         names[i].innerHTML = data[i][0];
     }
+    var middles = document.getElementsByClassName("middle-info");
+    var colors = ["rgb(73, 108, 221)", "rgb(0, 153, 51)", "rgb(102, 0, 255)", "rgb(255, 102, 0)", "rgb(51, 204, 204)"];
 
+    for (var i = 0; i < middles.length; i++) {
+        if (i >= colors.length) {
+            middles[i].style.background = colors[0];
+        } else {
+            middles[i].style.background = colors[i];
+        }
+    }
     startTime();
 }
 
